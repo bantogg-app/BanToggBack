@@ -19,7 +19,7 @@ class SuggestionController extends Controller
     {
         $validated = $request->validate([
             'proteines' => 'required|array|min:1',
-            'proteines.*' => 'in:viande,poisson,poulet,oeufs,sans_proteine',
+            'proteines.*' => 'in:viande,poisson,poulet,oeufs,non_proteine',
             'type_repas' => 'required|in:dejeuner,diner,peu_importe',
             'device_id' => 'nullable|string',
         ]);
